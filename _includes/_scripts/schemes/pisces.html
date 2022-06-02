@@ -1,0 +1,8 @@
+{% assign scripts = 'src/affix.js, src/schemes/pisces.js' | split: ", " %}
+
+{% for script in scripts %}
+  <script type="text/javascript" src="{{ site.js | relative_url }}/{{ script }}?v={{ site.version }}"></script>
+<script type="text/javascript" src="https://demo.hellozwh.com/source/canvas-nest.min.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+{% endfor %}
